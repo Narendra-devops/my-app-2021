@@ -45,7 +45,7 @@ pipeline{
         branch "uat"
       }
       steps{
-        sh "curl -u admin:admin -X GET 'http://65.0.19.206:8081/service/rest/v1/repositories'"
+        sh "curl -u admin:admin -X GET 'http://15.206.213.44:8081/service/rest/v1/repositories'"
         // How do you get latest artifact from nexus?
         echo "deploy to uat environment"
       }

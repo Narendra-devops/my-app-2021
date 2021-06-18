@@ -23,7 +23,7 @@ pipeline{
           [[artifactId: 'myweb', classifier: '', file: "target/myweb-${pom.version}.war", type: 'war']], 
           credentialsId: 'nexus3', 
           groupId: 'in.javahome', 
-          nexusUrl: '172.31.11.107:8081', 
+          nexusUrl: '172.31.26.225:8081', 
           nexusVersion: 'nexus3', protocol: 'http', 
           repository: repository, 
           version: pom.version
@@ -45,7 +45,7 @@ pipeline{
         branch "uat"
       }
       steps{
-        sh "curl -u admin:admin -X GET 'http://65.0.19.206:8081/service/rest/v1/repositories'"
+        sh "curl -u admin:admin -X GET 'http://15.206.213.44:8081/service/rest/v1/repositories'"
         // How do you get latest artifact from nexus?
         echo "deploy to uat environment"
       }
